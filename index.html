@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produco - Productivity Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="logo">🔥 PRODUCO</h1>
+            <p class="tagline">Simple Productivity Tracking</p>
+        </header>
+
+        <nav class="nav">
+            <button class="nav-btn active" data-tab="dashboard">Dashboard</button>
+            <button class="nav-btn" data-tab="tasks">Tasks</button>
+            <button class="nav-btn" data-tab="timer">Focus Timer</button>
+            <button class="nav-btn" data-tab="stats">Stats</button>
+        </nav>
+
+        <main class="main-content">
+            <!-- Dashboard Tab -->
+            <div class="tab-content active" id="dashboard">
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h3>Today's Progress</h3>
+                        <div class="stat">
+                            <span class="stat-number" id="tasksCompleted">0</span>
+                            <span class="stat-label">Tasks Completed</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Focus Time</h3>
+                        <div class="stat">
+                            <span class="stat-number" id="focusTime">0</span>
+                            <span class="stat-label">Minutes Today</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Current Streak</h3>
+                        <div class="stat">
+                            <span class="stat-number" id="streak">0</span>
+                            <span class="stat-label">Days</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Productivity Score</h3>
+                        <div class="stat">
+                            <span class="stat-number" id="productivityScore">0</span>
+                            <span class="stat-label">Points</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h3>Recent Activity</h3>
+                    <div class="activity-list" id="activityList">
+                        <!-- Activity items will be added here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tasks Tab -->
+            <div class="tab-content" id="tasks">
+                <div class="tasks-header">
+                    <h2>Task Management</h2>
+                    <div class="task-controls">
+                        <input type="text" id="taskInput" placeholder="Add a new task..." maxlength="100">
+                        <select id="taskPriority">
+                            <option value="low">Low Priority</option>
+                            <option value="medium" selected>Medium Priority</option>
+                            <option value="high">High Priority</option>
+                        </select>
+                        <button id="addTaskBtn" class="btn btn-primary">Add Task</button>
+                    </div>
+                </div>
+
+                <div class="task-filters">
+                    <button class="filter-btn active" data-filter="all">All Tasks</button>
+                    <button class="filter-btn" data-filter="active">Active</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+
+                <div class="task-list" id="taskList">
+                    <!-- Tasks will be added here -->
+                </div>
+            </div>
+
+            <!-- Timer Tab -->
+            <div class="tab-content" id="timer">
+                <div class="timer-container">
+                    <h2>Focus Timer</h2>
+                    
+                    <div class="timer-display">
+                        <div class="timer-circle">
+                            <span id="timerDisplay">25:00</span>
+                        </div>
+                    </div>
+
+                    <div class="timer-controls">
+                        <div class="timer-presets">
+                            <button class="preset-btn" data-minutes="25">25 min</button>
+                            <button class="preset-btn" data-minutes="45">45 min</button>
+                            <button class="preset-btn" data-minutes="60">60 min</button>
+                            <button class="preset-btn" data-minutes="90">90 min</button>
+                        </div>
+                        
+                        <div class="timer-buttons">
+                            <button id="startTimer" class="btn btn-success">Start Focus</button>
+                            <button id="pauseTimer" class="btn btn-warning">Pause</button>
+                            <button id="resetTimer" class="btn btn-danger">Reset</button>
+                        </div>
+                    </div>
+
+                    <div class="timer-stats">
+                        <div class="timer-stat">
+                            <span id="sessionsCompleted">0</span>
+                            <span>Sessions Today</span>
+                        </div>
+                        <div class="timer-stat">
+                            <span id="totalFocusTime">0</span>
+                            <span>Total Minutes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Tab -->
+            <div class="tab-content" id="stats">
+                <div class="stats-container">
+                    <h2>Productivity Statistics</h2>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>This Week</h3>
+                            <div class="week-stats">
+                                <div class="mini-stat">
+                                    <span id="weekTasks">0</span>
+                                    <span>Tasks</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span id="weekMinutes">0</span>
+                                    <span>Minutes</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span id="weekScore">0</span>
+                                    <span>Points</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>This Month</h3>
+                            <div class="month-stats">
+                                <div class="mini-stat">
+                                    <span id="monthTasks">0</span>
+                                    <span>Tasks</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span id="monthMinutes">0</span>
+                                    <span>Minutes</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span id="monthScore">0</span>
+                                    <span>Points</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="productivity-chart">
+                        <h3>7-Day Productivity</h3>
+                        <canvas id="productivityChart" width="400" height="200"></canvas>
+                    </div>
+
+                    <div class="achievements">
+                        <h3>Achievements</h3>
+                        <div class="achievement-list">
+                            <div class="achievement locked" data-achievement="first-task">
+                                <span class="achievement-icon">🎯</span>
+                                <span class="achievement-name">First Task</span>
+                                <span class="achievement-desc">Complete your first task</span>
+                            </div>
+                            <div class="achievement locked" data-achievement="focus-warrior">
+                                <span class="achievement-icon">⚡</span>
+                                <span class="achievement-name">Focus Warrior</span>
+                                <span class="achievement-desc">Complete 5 focus sessions</span>
+                            </div>
+                            <div class="achievement locked" data-achievement="streak-master">
+                                <span class="achievement-icon">🔥</span>
+                                <span class="achievement-name">Streak Master</span>
+                                <span class="achievement-desc">7-day streak</span>
+                            </div>
+                            <div class="achievement locked" data-achievement="productivity-king">
+                                <span class="achievement-icon">👑</span>
+                                <span class="achievement-name">Productivity King</span>
+                                <span class="achievement-desc">1000 points in a week</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

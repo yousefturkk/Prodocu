@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produco - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Produco</h1>
+            <nav>
+                <a href="tasks.html">Tasks</a>
+                <a href="timer.html">Timer</a>
+                <a href="stats.html">Stats</a>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="quick-stats">
+                <div class="quick-stat">
+                    <h3>Pending Tasks</h3>
+                    <div id="pending-count" class="stat-number">0</div>
+                </div>
+                <div class="quick-stat">
+                    <h3>Focus Today</h3>
+                    <div id="focus-today" class="stat-number">0h</div>
+                </div>
+                <div class="quick-stat">
+                    <h3>Streak</h3>
+                    <div id="current-streak" class="stat-number">0</div>
+                </div>
+            </div>
+            
+            <div class="recent-section">
+                <h3>Recent Tasks</h3>
+                <div id="recent-tasks" class="task-list-mini">
+                    <!-- Recent tasks will be rendered here -->
+                </div>
+            </div>
+            
+            <div class="recent-section">
+                <h3>Recent Focus Sessions</h3>
+                <div id="recent-sessions" class="session-list-mini">
+                    <!-- Recent sessions will be rendered here -->
+                </div>
+            </div>
+            
+            <div class="quick-actions">
+                <a href="tasks.html" class="btn btn-primary">Add Task</a>
+                <a href="timer.html" class="btn btn-secondary">Start Focus</a>
+            </div>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produco - Focus Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Focus Timer</h1>
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="tasks.html">Tasks</a>
+                <a href="stats.html">Stats</a>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="timer-display">
+                <div id="time">25:00</div>
+                <div id="task-name">No task selected</div>
+            </div>
+            
+            <div class="timer-controls">
+                <button id="start-btn" class="btn btn-primary">Start</button>
+                <button id="pause-btn" class="btn btn-secondary">Pause</button>
+                <button id="stop-btn" class="btn btn-danger">Stop</button>
+            </div>
+            
+            <div class="session-info">
+                <h3>Current Session</h3>
+                <div id="session-details">
+                    <p>Task: <span id="current-task">None</span></p>
+                    <p>Duration: <span id="session-duration">25</span> minutes</p>
+                    <p>Status: <span id="session-status">Idle</span></p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

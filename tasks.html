@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produco - Tasks</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tasks</h1>
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="timer.html">Timer</a>
+                <a href="stats.html">Stats</a>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="task-form">
+                <input type="text" id="task-input" placeholder="Add new task...">
+                <select id="priority-select">
+                    <option value="low">Low</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <button id="add-task-btn" class="btn btn-primary">Add Task</button>
+            </div>
+            
+            <div class="task-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+            
+            <div id="task-list" class="task-list">
+                <!-- Tasks will be rendered here -->
+            </div>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

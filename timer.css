@@ -1,0 +1,68 @@
+/**
+ * Timer specific styles for Produco
+ * Focus timer component styling
+ */
+
+.timer-display {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.timer-display #time {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #10B981;
+    font-family: 'Courier New', monospace;
+}
+
+.timer-display #task-name {
+    font-size: 1.2rem;
+    color: #888;
+    margin-top: 1rem;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.timer-controls .btn {
+    min-width: 120px;
+}
+
+.session-info {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.session-info h3 {
+    margin: 0 0 1rem 0;
+    color: #fff;
+}
+
+.session-info p {
+    margin: 0.5rem 0;
+    color: #888;
+}
+
+.session-info span {
+    color: #fff;
+    font-weight: 500;
+}
+
+#session-status.running {
+    color: #10B981;
+}
+
+#session-status.paused {
+    color: #F59E0B;
+}
+
+#session-status.idle {
+    color: #6B7280;
+}

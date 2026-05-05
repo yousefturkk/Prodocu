@@ -1,0 +1,75 @@
+/**
+ * Dashboard styles for Produco
+ * Additional styling for dashboard components
+ */
+
+.quick-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.quick-stat {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.quick-stat h3 {
+    margin: 0 0 0.5rem 0;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #10B981;
+}
+
+.recent-section {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.recent-section h3 {
+    margin: 0 0 1rem 0;
+    color: #fff;
+}
+
+.task-list-mini,
+.session-list-mini {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.task-item-mini,
+.session-item-mini {
+    padding: 0.75rem;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-item-mini:last-child,
+.session-item-mini:last-child {
+    border-bottom: none;
+}
+
+.quick-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.quick-actions .btn {
+    flex: 1;
+    text-align: center;
+}

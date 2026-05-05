@@ -1,0 +1,25 @@
+{
+  "env": "development",
+  "api": {
+    "baseUrl": "http://localhost:3000",
+    "timeout": 5000
+  },
+  "features": {
+    "hotReload": true,
+    "debugMode": true,
+    "mockData": true
+  },
+  "timer": {
+    "workDuration": 25,
+    "breakDuration": 5,
+    "autoStartBreak": false
+  },
+  "storage": {
+    "type": "localStorage",
+    "prefix": "produco_dev"
+  },
+  "logging": {
+    "enabled": true,
+    "level": "debug"
+  }
+}

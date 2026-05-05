@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produco - Statistics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Statistics</h1>
+            <nav>
+                <a href="index.html">Dashboard</a>
+                <a href="tasks.html">Tasks</a>
+                <a href="timer.html">Timer</a>
+            </nav>
+        </header>
+        
+        <main>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total Tasks</h3>
+                    <div id="total-tasks" class="stat-value">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Completed</h3>
+                    <div id="completed-tasks" class="stat-value">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Focus Hours</h3>
+                    <div id="focus-hours" class="stat-value">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Streak</h3>
+                    <div id="streak" class="stat-value">0 days</div>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <h3>Completion Rate</h3>
+                <div class="progress-bar">
+                    <div id="completion-rate" class="progress-fill" style="width: 0%"></div>
+                </div>
+                <p id="completion-text">0%</p>
+            </div>
+            
+            <div class="stats-section">
+                <h3>Weekly Focus Time</h3>
+                <div id="weekly-chart" class="chart"></div>
+            </div>
+            
+            <div class="stats-section">
+                <h3>Tasks by Priority</h3>
+                <div id="priority-breakdown"></div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
